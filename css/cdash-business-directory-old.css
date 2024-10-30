@@ -1,0 +1,308 @@
+#business img, .business-categories img,
+#businesslist img,
+#cdcrm-people img {
+max-width: 100%;
+height: auto;
+}
+
+#business img[class*="align"],
+#business img[class*="wp-image-"],
+#businesslist img[class*="align"],
+#businesslist img[class*="wp-image-"],
+#cdcrm-people img[class*="align"],
+#cdcrm-people img[class*="wp-image-"] {
+height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+#business img.size-full,
+#businesslist img.size-full,
+#cdcrm img.size-full {
+max-width: 100%;
+width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+
+#business img.logo, #business img.featured,
+#businesslist img.logo, #businesslist img.featured {
+  max-width:50%;
+  height:auto;
+}
+
+#businesslist.logo_gallery img.logo{
+	max-width:100%;
+}
+
+#businesslist.full_width img.logo{
+  max-width:100%;
+  width:100%;
+}
+
+#business .membership span,
+#business .categories span,
+#businesslist .membership span,
+#businesslist .categories span {
+ font-weight: bold;
+}
+
+#business .membership,
+#businesslist .description {
+ margin: 0;
+ clear: both;
+}
+
+.cdash-social-media .icons li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	margin-right: 10px;
+}
+
+.cdash-social-media .icons img {
+	border: none;
+	box-shadow: none;
+}
+
+#business .location p,
+#businesslist .location p {
+ margin: 0;
+}
+
+#businesslist.list .business:after,
+#search-results .business:after {
+display: table;
+content: '';
+clear: both;
+}
+
+#businesslist .business,
+#search-results .business {
+	margin-bottom: 15px;
+}
+
+#businesslist.grid2:after,
+#businesslist.grid3:after,
+#businesslist.grid4:after,
+#cdcrm-people.grid2:after,
+#cdcrm-people.grid3:after,
+#cdcrm-people.grid4:after,
+#search-results.grid2:after,
+#search-results.grid3:after,
+#search-results.grid4:after {
+	display: table;
+  content: '';
+  clear: both;
+}
+
+#businesslist.grid2 .business,
+#cdcrm-people.grid2 .cdcrm-person,
+#search-results.grid2 .business {
+	width: 45%;
+	margin-right: 2%;
+	float: left;
+}
+
+#businesslist.grid3 .business,
+#cdcrm-people.grid3 .cdcrm-person,
+#search-results.grid3 .business {
+	width: 30%;
+	margin-right: 2%;
+	float: left;
+}
+
+#businesslist.grid3 .business .logo.alignleft, #businesslist.grid3 .business .featured.alignleft,
+#businesslist.grid4 .business .logo.alignleft, #businesslist.grid4 .business .featured.alignleft,
+#businesslist.responsive .business .logo.alignleft, #businesslist.responsive .business .featured.alignleft,
+#search-results.grid3 .business .logo.alignleft,
+#search-results.grid4 .business .logo.alignleft{
+	width: 100%;
+    max-width: 100%;
+    float: none;
+    margin-bottom: 1em;
+}
+
+#businesslist.grid4 .business,
+#cdcrm-people.grid4 .cdcrm-person,
+#search-results.grid4 .business {
+	width: 22.5%;
+	margin-right: 2%;
+	float: left;
+}
+
+.cdash_bus_directory.pagination {
+	text-align: center;
+	margin: 20px 0;
+	clear: both;
+}
+
+#map-canvas img { max-width: none !important; height: auto; }
+
+#cdash-contacts p {
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+	#businesslist.grid2 .business,
+	#businesslist.grid3 .business,
+	#businesslist.grid4 .business,
+	#cdcrm-people.grid2 .cdcrm-person,
+	#cdcrm-people.grid3 .cdcrm-person,
+	#cdcrm-people.grid4 .cdcrm-person,
+	#search-results.grid2 .business,
+	#search-results.grid3 .business,
+	#search-results.grid4 .business{
+		width: 100%;
+		float: none;
+	}
+}
+
+/* Responsive Grid Styles */
+#businesslist.responsive, .business_category.responsive{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  column-gap: 2%;
+  grid-auto-columns: max-content;
+}
+
+#search-results.responsive{
+	display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  	column-gap: 2%;
+  	grid-auto-columns: max-content;
+}
+
+.cdash_parent_category{
+  padding:25px;
+}
+
+.cdash_pc_link{
+  display:block;
+}
+
+.entry-content .alpha_listings{
+  height:auto;
+  overflow:hidden;
+  max-width:80%;
+  margin:0 auto;
+  text-align:center;
+  margin-bottom:80px;
+  display: flex;
+  justify-content: center;
+}
+
+.alpha_listings ul{
+    width:100%;
+}
+
+.alpha_listings ul li{
+  /*float:left;*/
+  display: inline-flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0.75%;
+  padding-right: 0.75%;
+  }
+
+  .cdash_cat_filter{
+      margin-bottom:80px;
+  }
+
+#loader, #business_listings_format, #cdash_bus_list_page{
+  display:none;
+}
+
+/*Logo Gallery Responsive Styles*/
+#businesslist.responsive.logo_gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    grid-gap:0;
+}
+
+#businesslist.responsive.logo_gallery .business{
+    margin:auto calc(.5em + .75vmin);
+}
+
+#businesslist.responsive.logo_gallery .business .description{
+    margin: 1em auto;
+}
+
+#businesslist.responsive.logo_gallery .business .description a img.logo{
+    margin:0;
+    display:block;
+	height:auto;
+	max-width:100%;
+}
+
+#businesslist.logo_gallery.grid2 .business .description a img.logo, #businesslist.logo_gallery.grid3 .business .description a img.logo, #businesslist.logo_gallery.grid4 .business .description a img.logo{
+	margin:0 auto;
+	display:block;
+}
+/****/
+/*Image alignment for blocks*/
+#businesslist.cd_block img.thumbnail, #businesslist.list.cd_block img.medium, #businesslist.list.cd_block img.large, #businesslist.grid2.cd_block img.medium, #businesslist.cd_block.responsive a.grid2 img.medium, #businesslist.cd_block a.grid1 img.medium, #businesslist.list.cd_block a.grid1 img.large{
+	float:left;
+	margin-right:3%;
+	margin-bottom:3%;
+}
+
+#businesslist.cd_block.logo_gallery img.thumbnail, #businesslist.grid2.cd_block.logo_gallery img.medium, #businesslist.grid2.cd_block.logo_gallery img.large,  #businesslist.grid2.cd_block img.large{
+	float:none;
+}
+
+
+#businesslist.cd_block img.full, #businesslist.grid2.cd_block img.large, #businesslist.grid3.cd_block img.medium, #businesslist.grid3.cd_block img.large, #businesslist.grid4.cd_block img.medium, #businesslist.grid4.cd_block img.large{
+	max-width:100%;
+}
+
+#businesslist.cd_block.responsive a.grid2 img.large, #businesslist.cd_block.responsive a.grid1 img.large{
+	max-width:100%;
+}
+
+/*#businesslist.grid3.cd_block img.medium, #businesslist.grid3.cd_block img.large, #businesslist.grid2.cd_block img.full, #businesslist.grid3.cd_block img.full, #businesslist.grid4.cd_block img.medium, #businesslist.grid4.cd_block img.large, #businesslist.grid4.cd_block img.full{
+	width:100%;
+}*/
+
+/*Adding these styles along with the display image on top option in business directory block*/
+#businesslist.cd_block .business .description.bus_listing_image{
+	height:auto;
+	overflow: hidden;
+}
+
+/* Adding this to wrap the emails and categories*/
+
+#businesslist .business .email a, #businesslist .business .categories{
+    overflow-wrap: break-word;
+}
+
+/*Adding padding for business list with borders*/
+#businesslist .business.border_set h3, #businesslist .business.border_set .description .bus_content, #businesslist .business.border_set p, #businesslist .business.border_set .description a img.auto, #businesslist .business.border_set .description a img.thumbnail, #businesslist .business.border_set .description a img.medium, #businesslist .business.border_set .description a img.large {
+	padding: 0px 10px;
+}
+
+#businesslist .business.border_set .description span.bus_content{
+	display:block;
+}
+
+#businesslist.grid4.cd_block.alignfull{
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2%;
+}
+
+
+#businesslist.grid3.cd_block.alignfull{
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2%;
+}
+
+#businesslist.grid2.cd_block.alignfull{
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+}
+
+#businesslist.grid4.cd_block.alignfull .business, #businesslist.grid3.cd_block.alignfull .business, #businesslist.grid2.cd_block.alignfull .business{
+	width: auto;
+	margin-right: 0px;
+}

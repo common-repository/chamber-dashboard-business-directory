@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+#addons_list ul{
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+    grid-row-gap: 40px;
+    grid-column-gap: 5%;
+}
+
+.single_addon{
+    border: #B2B2B2 5px solid;
+    padding-top:20px;
+    /*float:left;
+    width:25%;
+    margin-right:10px;
+    padding-top:20px;*/
+}
+
+.single_addon h3{
+  width:90%;
+  margin:0 auto;
+  margin-top:10px;
+  padding:10px 0px 10px 0px;
+  text-align:center;
+  line-height:24px;
+  min-height:50px;
+}
+
+.single_addon.theme h3{
+  padding:7px 0px 0px 0px;
+}
+
+.single_addon img{
+    /*width: 45%;*/
+    width:40%;
+    margin: 0 auto;
+    display: block;
+}
+
+.single_addon.theme img{
+  /*width:90%;*/
+  width:81%;
+}
+
+.single_addon h4, .single_addon p{
+    width:80%;
+    margin:0 auto;
+    padding-top:10px;
+}
+
+.single_addon p{
+    min-height: 60px;
+}
+
+.single_addon a.button-primary, .cdash_admin.button-primary, .cdash_admin.button-secondary:hover{
+    margin-left:15px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    background:#B1304D;
+    border-color: #B1304D;
+    box-shadow: 0 1px #B1304D;
+    text-shadow: 0 -1px 1px #B1304D, 1px 0 1px #B1304D, 0 1px 1px #B1304D, -1px 0 1px #B1304D;
+    color:#fff;
+}
+
+.single_addon a.button-primary:hover, .cdash_admin.button-primary:hover, .cdash_admin.button-secondary{
+  background:#fff;
+  color:#B1304D;
+  text-shadow:none;
+  border-color: #B1304D;
+}
+
+.cdash_admin.button-secondary:hover{
+    margin:0px;
+}

@@ -1,0 +1,29 @@
+#business-search.left{
+    
+}
+
+#business-search.center{
+    text-align:center;
+}
+
+#business-search.center #business-search-form{
+    text-align:center;
+}
+
+#business-search-form .business-search-term input{
+    width:50%;
+}
+
+#business-search.center .business-search-term input{
+    margin:0 auto;
+}
+
+#business-search.right{
+    text-align:right;
+}
+
+#business-search.right .business-search-term input{
+    margin-left:auto;
+    margin-right:0;
+    text-align:right;
+}

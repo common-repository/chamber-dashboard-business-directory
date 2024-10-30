@@ -1,0 +1,421 @@
+#business img, .business-categories img, #businesslist img, #cdcrm-people img {
+	max-width: 100%;
+	height: auto;
+}
+
+#business img.size-full, .business-categories img.size-full, #businesslist img.size-full, #cdcrm-people img.size-full {
+	width: auto;
+	max-width: 100%;
+	/* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+
+#business img[class*="align"], #business img[class*="wp-image"], #businesslist img[class*="align"], #businesslist img[class*="wp-image"], #cdcrm-people img[class*="align"], #cdcrm-people img[class*="wp-image"] {
+	height: auto;
+	/* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+#business, #businesslist {
+	/*img{
+        &.logo, &.featured{
+            max-width:50%;
+            height:auto;
+        }
+    }*/
+}
+
+#business .membership, #businesslist .membership {
+	margin: 0;
+	clear: both;
+}
+
+#business .membership span, #business .categories span, #businesslist .membership span, #businesslist .categories span {
+	font-weight: bold;
+}
+
+#business .location p, #businesslist .location p {
+	margin: 0;
+}
+
+#businesslist {
+	display: grid;
+	grid-column-gap: 2%;
+}
+
+#businesslist .business {
+	width: 100%;
+	margin-bottom: 15px;
+	/*&:after{
+            display: table;
+            content: '';
+            clear: both;
+        }*/
+}
+
+#businesslist.logo_gallery img.logo {
+	max-width: 100%;
+}
+
+#businesslist.full_width img.logo {
+	width: 100%;
+	max-width: 100%;
+}
+
+#businesslist .description {
+	margin: 0;
+	clear: both;
+}
+
+#businesslist.grid2 {
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 600px) {
+	#businesslist.grid2 {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+#businesslist.grid3 {
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 600px) {
+	#businesslist.grid3 {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#businesslist.grid3 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+#businesslist.grid3 .business {
+	width: 100%;
+}
+
+#businesslist.grid3 .business .logo.alignleft, #businesslist.grid3 .business .featured.alignleft {
+	width: 100%;
+	max-width: 100%;
+	float: none;
+	margin-bottom: 1em;
+}
+
+#businesslist.grid4 {
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 600px) {
+	#businesslist.grid4 {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#businesslist.grid4 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#businesslist.grid4 {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+#businesslist.grid4 .business {
+	width: 100%;
+}
+
+#businesslist.grid4 .business .logo.alignleft, #businesslist.grid4 .business .featured.alignleft {
+	width: 100%;
+	max-width: 100%;
+	float: none;
+	margin-bottom: 1em;
+}
+
+/*Adding these styles along with the display image on top option in business directory block*/
+#businesslist.cd_block {
+	/*&.alignfull, &.alignwide{
+            margin-right: 0px;
+        }*/
+}
+
+#businesslist.cd_block.responsive {
+	display: grid;
+	column-gap: 2%;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+}
+
+/** Logo Gallery Responsive Styles*/
+#businesslist.logo_gallery.responsive {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+	grid-auto-columns: max-content;
+	column-gap: 2%;
+}
+
+#businesslist.logo_gallery.responsive.logo_gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-gap: 0;
+}
+
+#businesslist.logo_gallery.responsive.logo_gallery .business {
+	margin: auto calc(.5em + .75vmin);
+}
+
+#businesslist.logo_gallery.responsive.logo_gallery .business .description {
+	margin: 1em auto;
+}
+
+#businesslist.logo_gallery.responsive.logo_gallery .business .description a img.logo {
+	margin: 0;
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+#businesslist.logo_gallery.grid2 .business .description a img.logo, #businesslist.logo_gallery.grid3 .business .description a img.logo, #businesslist.logo_gallery.grid4 .business .description a img.logo {
+	display: block;
+	margin: 0 auto;
+}
+
+/** Image alignment for blocks*/
+#businesslist.cd_block img {
+	/*margin: 0px 3% 3% 0px;*/
+}
+
+#businesslist.cd_block.has-text-align-center .description a img, #businesslist.cd_block.has-text-align-center img {
+	margin: 0 auto;
+}
+
+#businesslist.cd_block.list img.featured, #businesslist.cd_block.list img.logo {
+	max-width: 100%;
+	height: auto;
+}
+
+#businesslist.cd_block.list img.featured.auto, #businesslist.cd_block.list img.featured.thumbnail, #businesslist.cd_block.list img.featured.medium, #businesslist.cd_block.list img.logo.auto, #businesslist.cd_block.list img.logo.thumbnail, #businesslist.cd_block.list img.logo.medium {
+	float: left;
+	margin-right: 3%;
+	margin-bottom: 3%;
+}
+
+#businesslist.cd_block.list img.featured.large, #businesslist.cd_block.list img.featured.full, #businesslist.cd_block.list img.logo.large, #businesslist.cd_block.list img.logo.full {
+	float: none;
+}
+
+#businesslist.cd_block.grid2 img.featured, #businesslist.cd_block.grid2 img.logo, #businesslist.cd_block .responsive a.grid1 img.featured, #businesslist.cd_block .responsive a.grid1 img.logo, #businesslist.cd_block .responsive a.grid2 img.featured, #businesslist.cd_block .responsive a.grid2 img.logo {
+	max-width: 100%;
+	height: auto;
+}
+
+#businesslist.cd_block.grid2 img.featured.auto, #businesslist.cd_block.grid2 img.featured.thumbnail, #businesslist.cd_block.grid2 img.logo.auto, #businesslist.cd_block.grid2 img.logo.thumbnail, #businesslist.cd_block .responsive a.grid1 img.featured.auto, #businesslist.cd_block .responsive a.grid1 img.featured.thumbnail, #businesslist.cd_block .responsive a.grid1 img.logo.auto, #businesslist.cd_block .responsive a.grid1 img.logo.thumbnail, #businesslist.cd_block .responsive a.grid2 img.featured.auto, #businesslist.cd_block .responsive a.grid2 img.featured.thumbnail, #businesslist.cd_block .responsive a.grid2 img.logo.auto, #businesslist.cd_block .responsive a.grid2 img.logo.thumbnail {
+	float: left;
+	margin-right: 3%;
+	margin-bottom: 3%;
+}
+
+#businesslist.cd_block.grid2 img.featured.medium, #businesslist.cd_block.grid2 img.featured.large, #businesslist.cd_block.grid2 img.featured.full, #businesslist.cd_block.grid2 img.logo.medium, #businesslist.cd_block.grid2 img.logo.large, #businesslist.cd_block.grid2 img.logo.full, #businesslist.cd_block .responsive a.grid1 img.featured.medium, #businesslist.cd_block .responsive a.grid1 img.featured.large, #businesslist.cd_block .responsive a.grid1 img.featured.full, #businesslist.cd_block .responsive a.grid1 img.logo.medium, #businesslist.cd_block .responsive a.grid1 img.logo.large, #businesslist.cd_block .responsive a.grid1 img.logo.full, #businesslist.cd_block .responsive a.grid2 img.featured.medium, #businesslist.cd_block .responsive a.grid2 img.featured.large, #businesslist.cd_block .responsive a.grid2 img.featured.full, #businesslist.cd_block .responsive a.grid2 img.logo.medium, #businesslist.cd_block .responsive a.grid2 img.logo.large, #businesslist.cd_block .responsive a.grid2 img.logo.full {
+	float: none;
+}
+
+#businesslist.cd_block.grid3 img.featured.auto, #businesslist.cd_block.grid3 img.logo.auto, #businesslist.cd_block.grid4 img.featured.auto, #businesslist.cd_block.grid4 img.logo.auto, #businesslist.cd_block.responsive img.featured.auto, #businesslist.cd_block.responsive img.logo.auto {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+#businesslist.cd_block.grid3 img.featured.thumbnail, #businesslist.cd_block.grid3 img.logo.thumbnail, #businesslist.cd_block.grid4 img.featured.thumbnail, #businesslist.cd_block.grid4 img.logo.thumbnail, #businesslist.cd_block.responsive img.featured.thumbnail, #businesslist.cd_block.responsive img.logo.thumbnail {
+	float: left;
+}
+
+#businesslist.cd_block.grid3 img.featured.full, #businesslist.cd_block.grid3 img.logo.full, #businesslist.cd_block.grid4 img.featured.full, #businesslist.cd_block.grid4 img.logo.full, #businesslist.cd_block.responsive img.featured.full, #businesslist.cd_block.responsive img.logo.full {
+	width: 100%;
+}
+
+/*Adding padding for business list with borders*/
+#businesslist .business.border_set h3, #businesslist .business.border_set .description.bus_content, #businesslist .business.border_set .bus_content, #businesslist .business.border_set p {
+	padding: 0px 10px;
+}
+
+#businesslist .business.border_set .description a img.auto, #businesslist .business.border_set .description a img.thumbnail, #businesslist .business.border_set .description a img.medium, #businesslist .business.border_set .description a img.large {
+	padding: 0 10px;
+}
+
+#businesslist .business.border_set .description span.bus_content {
+	display: block;
+}
+
+.business_category.responsive {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+	grid-auto-columns: max-content;
+	column-gap: 2%;
+}
+
+.business_category .cdash_parent_category {
+	padding: 25px;
+}
+
+.business_category .cdash_parent_category .cdash_pc_link {
+	display: block;
+}
+
+/*Alpha Listing Styles for Business Directory Display*/
+.alpha_listings {
+	height: auto;
+	overflow: hidden;
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 80px;
+	display: flex;
+	justify-content: center;
+}
+
+.alpha_listings ul {
+	width: 100%;
+}
+
+.alpha_listings ul li {
+	display: inline-flex;
+	justify-content: center;
+	list-style-type: none;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+}
+
+/*Category Filter dropdown styles for business directory display*/
+#loader, #business_listings_format, #cdash_bus_list_page {
+	display: none;
+}
+
+.cdash_cat_filter {
+	margin-bottom: 80px;
+}
+
+#search-results .business {
+	margin-bottom: 15px;
+}
+
+#search-results .business:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+#search-results.grid2 .business {
+	width: 45%;
+	margin-right: 2%;
+	float: left;
+}
+
+#search-results.grid3 .business {
+	width: 30%;
+	margin-right: 2%;
+	float: left;
+}
+
+#search-results.grid3 .business .logo.alignleft {
+	width: 100%;
+	max-width: 100%;
+	float: none;
+	margin-bottom: 1em;
+}
+
+#search-results.grid4 .business {
+	width: 22.5%;
+	margin-right: 2%;
+	float: left;
+}
+
+#search-results.grid4 .business .logo.alignleft {
+	width: 100%;
+	max-width: 100%;
+	float: none;
+	margin-bottom: 1em;
+}
+
+#search-results.grid2:after, #search-results.grid3:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+@media screen and (max-width: 700px) {
+	#search-results.grid2 .business, #search-results.grid3 .business, #search-results.grid4 .business {
+		width: 100%;
+		float: none;
+	}
+}
+
+#search-results.responsive {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	column-gap: 2%;
+	grid-auto-columns: max-content;
+}
+
+.cdash-social-media .icons li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	margin-right: 10px;
+}
+
+.cdash-social-media .icons img {
+	border: none;
+	box-shadow: none;
+}
+
+#cdcrm-people.grid2:after, #cdcrm-people.grid3:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+#cdcrm-people.grid2 .cdcrm-person {
+	width: 45%;
+	margin-right: 2%;
+	float: left;
+}
+
+#cdcrm-people.grid3 .cdcrm-person {
+	width: 30%;
+	margin-right: 2%;
+	float: left;
+}
+
+#cdcrm-people.grid4 .cdcrm-person {
+	width: 22.5%;
+	margin-right: 2%;
+	float: left;
+}
+
+@media screen and (max-width: 700px) {
+	#cdcrm-people.grid2 .cdcrm-person, #cdcrm-people.grid3 .cdcrm-person, #cdcrm-people.grid4 .cdcrm-person {
+		width: 100%;
+		float: none;
+	}
+}
+
+.cdash_bus_directory.pagination {
+	text-align: center;
+	margin: 20px 0;
+	clear: both;
+}
+
+#map-canvas img {
+	max-width: none !important;
+	height: auto;
+}
+
+#cdash-contacts p {
+	margin: 0;
+	padding: 0;
+}
+
+/*# sourceMappingURL=cdash-business-directory.css.map */

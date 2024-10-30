@@ -1,0 +1,31 @@
+{
+  "name": "bd-blocks",
+  "version": "1.0.0",
+  "description": "Business Directory blocks",
+  "main": "js/block.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "bundle": "dir-archiver --src . --dest ../chamber-dashboard-business-directory.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map",
+    "sass-watch": "node-sass sass/ -o css/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass sass/ -o css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/cguntur/chamber-dashboard-business-directory.git"
+  },
+  "author": "Chandrika Guntur",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/cguntur/chamber-dashboard-business-directory#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.12.0"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^12.9.0",
+    "@wordpress/server-side-render": "^1.8.6",
+    "dir-archiver": "^1.2.0",
+    "node-sass": "^7.0.3",
+    "sass": "^1.66.1"
+  }
+}

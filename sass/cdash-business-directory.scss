@@ -1,0 +1,461 @@
+#business, .business-categories, #businesslist, #cdcrm-people{
+    img{
+        max-width: 100%;
+        height: auto;
+
+        &.size-full{
+            width: auto;
+            max-width: 100%;/* Prevent stretching of full-size images with height and width attributes in IE8 */
+        }
+    }
+}
+
+#business, #businesslist, #cdcrm-people{
+    img[class*="align"], img[class*="wp-image"]{
+        height: auto;/* Make sure images with WordPress-added height and width attributes are scaled correctly */
+    }
+}
+
+#business, #businesslist{
+    /*img{
+        &.logo, &.featured{
+            max-width:50%;
+            height:auto;
+        }
+    }*/
+    .membership{
+        margin: 0;
+        clear: both;
+    }
+    .membership, .categories{
+        span{
+            font-weight: bold;
+        }
+    }
+    .location{
+        p{
+            margin: 0;
+        }
+    }
+}
+
+#businesslist{
+    display: grid;
+    grid-column-gap: 2%;
+    .business{
+        width: 100%;
+        margin-bottom: 15px;
+        /*&:after{
+            display: table;
+            content: '';
+            clear: both;
+        }*/
+    }
+
+    &.logo_gallery{
+        img.logo{
+            max-width: 100%;
+        }
+    }
+
+    &.full_width{
+        img.logo{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .description{
+        margin: 0;
+        clear: both;
+    }
+
+    &.grid2{
+        grid-template-columns: 1fr;
+        @media screen and (min-width: 600px){
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &.grid3{
+        grid-template-columns: 1fr;
+        @media screen and (min-width: 600px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 768px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .business{
+            width: 100%;
+            // margin-right: 2%;
+            // float: left; 
+
+            .logo.alignleft, .featured.alignleft{
+                width: 100%;
+                max-width: 100%;
+                float: none;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    &.grid4{
+        grid-template-columns: 1fr;
+        @media screen and (min-width: 600px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 768px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media screen and (min-width: 992px){
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .business{
+            width: 100%;
+            .logo.alignleft, .featured.alignleft{
+                width: 100%;
+                max-width: 100%;
+                float: none;
+                margin-bottom: 1em;
+            }
+        }
+    }
+}
+
+/*Adding these styles along with the display image on top option in business directory block*/
+#businesslist{
+    &.cd_block{
+        /*&.alignfull, &.alignwide{
+            margin-right: 0px;
+        }*/
+
+        &.responsive{
+            display: grid;
+            column-gap: 2%;
+            grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        }
+    }
+}
+
+/** Logo Gallery Responsive Styles*/
+#businesslist.logo_gallery{
+    &.responsive{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        grid-auto-columns: max-content;
+        column-gap: 2%;
+
+        &.logo_gallery{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            grid-gap:0;
+            
+            .business{
+                margin:auto calc(.5em + .75vmin);
+
+                .description{
+                    margin: 1em auto;
+
+                    a img.logo{
+                        margin:0;
+                        display:block;
+                        height:auto;
+                        max-width:100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.grid2, &.grid3, &.grid4{
+        .business{
+            .description{
+                a img.logo{
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+/** Image alignment for blocks*/
+
+$selector_one: selector-nest("&.grid2, .responsive a.grid1, .responsive a.grid2");
+
+$selector_list: selector-nest("&.list");
+
+$selector_two: selector-nest("&.grid3, &.grid4, &.responsive");
+
+$selector_three: selector-nest("&.has-text-align-center");
+#businesslist.cd_block{
+    img{
+        /*margin: 0px 3% 3% 0px;*/
+    }
+    #{$selector_three}{
+        .description a img, img{
+            margin: 0 auto;
+        }
+    }
+    #{$selector_list}{
+        img.featured, img.logo{
+            max-width: 100%;
+            height: auto;
+            &.auto, &.thumbnail, &.medium{
+                float: left;
+                margin-right: 3%;
+                margin-bottom: 3%;
+            }
+            &.large, &.full{
+                float: none;
+            }
+        }
+    }
+    #{$selector_one}{
+        img.featured, img.logo{
+            max-width: 100%;
+            height: auto;
+            &.auto, &.thumbnail{
+                float:left;
+                margin-right:3%;
+                margin-bottom:3%;
+            }
+            &.medium, &.large, &.full{
+                float: none;
+            }
+        }
+    }
+ 
+    #{$selector_two}{
+        img.featured, img.logo{
+            &.auto{
+                width: auto;
+                max-width: 100%;
+                height: auto;
+            }
+            &.thumbnail{
+                float: left;
+            }
+            &.full{
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*Adding padding for business list with borders*/
+#businesslist{
+    .business.border_set{
+        h3, .description.bus_content, .bus_content, p{
+            padding: 0px 10px;
+        }
+        .description {
+            a{
+                img{
+                    &.auto, &.thumbnail, &.medium, &.large{
+                        padding: 0 10px;
+                    }
+                }
+            }
+            span.bus_content{
+                display: block;
+            }
+        }
+    }
+}
+
+.business_category{
+    &.responsive{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        grid-auto-columns: max-content;
+        column-gap: 2%;
+    }
+
+    .cdash_parent_category{
+        padding:25px;
+
+        .cdash_pc_link{
+            display:block;
+          }
+      }
+}
+
+/*Alpha Listing Styles for Business Directory Display*/
+
+.alpha_listings{
+    height:auto;
+    overflow:hidden;
+    max-width:80%;
+    margin:0 auto;
+    text-align:center;
+    margin-bottom:80px;
+    display: flex;
+    justify-content: center;
+
+    ul{
+        width: 100%;
+
+        li{
+            display: inline-flex;
+            justify-content: center;
+            list-style-type: none;
+            padding-left: 0.75%;
+            padding-right: 0.75%;
+        }
+    }
+}
+
+/*Category Filter dropdown styles for business directory display*/
+#loader, #business_listings_format, #cdash_bus_list_page{
+    display:none;
+  }
+  
+.cdash_cat_filter{
+    margin-bottom: 80px;
+}
+
+#search-results{
+    .business{
+        margin-bottom: 15px;
+        &:after{
+            display: table;
+            content: '';
+            clear: both;
+        }
+    }
+    &.grid2{
+        .business{
+            width: 45%;
+            margin-right: 2%;
+            float:left;
+        }
+    }
+    &.grid3{
+        .business{
+            width: 30%;
+            margin-right: 2%;
+            float: left; 
+
+            .logo{
+                &.alignleft{
+                    width: 100%;
+                    max-width: 100%;
+                    float: none;
+                    margin-bottom: 1em; 
+                }
+            }
+        }
+    }
+    &.grid4{
+        .business{
+            width: 22.5%;
+            margin-right: 2%;
+            float: left;
+            .logo{
+                &.alignleft{
+                    width: 100%;
+                    max-width: 100%;
+                    float: none;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+    }
+    &.grid2:after, &.grid3:after{
+        display: table;
+        content: '';
+        clear: both;
+    }
+    @media screen and (max-width: 700px) {
+        &.grid2 .business, &.grid3 .business, &.grid4 .business{
+            width: 100%;
+            float: none;
+        }    
+    }
+
+    &.responsive{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        column-gap: 2%;
+        grid-auto-columns: max-content;
+    }
+}
+
+.cdash-social-media{
+    .icons{
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin: 0;
+            margin-right: 10px;
+        }
+        img{
+            border: none;
+            box-shadow: none;
+        }
+    }
+}
+
+#cdcrm-people{
+    &.grid2:after, &.grid3:after{
+        display: table;
+        content: '';
+        clear: both;
+    }
+    &.grid2{
+        .cdcrm-person{
+            width: 45%;
+            margin-right: 2%;
+            float:left;
+        }
+    }
+    &.grid3{
+        .cdcrm-person{
+            width: 30%;
+            margin-right: 2%;
+            float: left; 
+        }
+    }
+
+    &.grid4{
+        .cdcrm-person{
+            width: 22.5%;
+            margin-right: 2%;
+            float: left;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        &.grid2 .cdcrm-person, &.grid3 .cdcrm-person, &.grid4 .cdcrm-person{
+            width: 100%;
+            float: none;
+        }    
+    }
+}
+
+.cdash_bus_directory{
+    &.pagination{
+        text-align: center;
+        margin: 20px 0;
+        clear: both;
+    }
+}
+
+#map-canvas{
+    img{
+        max-width: none !important;
+        height: auto;
+    }
+}
+
+#cdash-contacts{
+    p{
+        margin: 0;
+        padding: 0;
+    }
+}
